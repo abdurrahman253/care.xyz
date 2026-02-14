@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const Banner = () => {
-  // Staggered animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -28,7 +27,6 @@ const Banner = () => {
 
   return (
     <section className="relative overflow-hidden bg-white">
-      {/* Background Decorative Blobs - Optimized for Mobile Performance */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-20 -left-20 w-40 h-40 bg-emerald-100 rounded-full blur-3xl opacity-50" />
         <div className="absolute top-1/2 -right-20 w-40 h-40 bg-blue-100 rounded-full blur-3xl opacity-50" />
@@ -37,7 +35,6 @@ const Banner = () => {
       <div className="relative z-10 container mx-auto px-5 sm:px-6 lg:px-8 pt-4 sm:pt-8 lg:pt-16 pb-12 lg:pb-24">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
           
-          {/* IMAGE COLUMN - Order 1 on Mobile for immediate impact */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -45,20 +42,18 @@ const Banner = () => {
             className="w-full lg:w-1/2 order-1 lg:order-2"
           >
             <div className="relative aspect-[4/3] sm:aspect-video lg:aspect-[4/3] w-full max-w-[500px] mx-auto">
-              {/* Glass Frame */}
               <div className="relative h-full w-full rounded-2xl overflow-hidden shadow-xl border-4 border-white">
-              <Image
-    src="/assets/img/banner_care_xyz.jpg"
-    alt="Professional Care"
-    width={800}  
-    height={600} 
-    priority
-    className="w-full h-full object-cover" 
-
+                <Image
+                  src="/assets/img/banner_care_xyz.jpg"
+                  alt="Professional Care"
+                  width={800}  
+                  height={600} 
+                  priority
+                  className="w-full h-full object-cover" 
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
               </div>
 
-              {/* Verified Badge - Scaled for Mobile */}
               <motion.div 
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -77,7 +72,6 @@ const Banner = () => {
             </div>
           </motion.div>
 
-          {/* TEXT COLUMN - Order 2 on Mobile */}
           <motion.div 
             variants={containerVariants}
             initial="hidden"
@@ -119,7 +113,6 @@ const Banner = () => {
               </Link>
             </motion.div>
 
-            {/* Micro Stats - Compact for Mobile */}
             <motion.div 
               variants={itemVariants}
               className="mt-10 flex items-center justify-center lg:justify-start gap-6 border-t border-gray-100 pt-8"
@@ -140,7 +133,6 @@ const Banner = () => {
               </div>
             </motion.div>
           </motion.div>
-
         </div>
       </div>
     </section>
