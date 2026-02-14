@@ -47,13 +47,14 @@ const Banner = () => {
             <div className="relative aspect-[4/3] sm:aspect-video lg:aspect-[4/3] w-full max-w-[500px] mx-auto">
               {/* Glass Frame */}
               <div className="relative h-full w-full rounded-2xl overflow-hidden shadow-xl border-4 border-white">
-                <Image
-                  src="/assets/img/banner_care_xyz.jpg"
-                  alt="Professional Care"
-                  fill
-                  priority
-                  className="object-cover"
-                />
+               <Image
+    src="/assets/img/banner_care_xyz.jpg"
+    alt="Professional Care"
+    fill
+    priority
+    className="object-cover"
+    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+  />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
               </div>
 
