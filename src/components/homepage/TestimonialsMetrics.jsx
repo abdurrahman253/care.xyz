@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 const TestimonialsMetrics = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -132,10 +133,12 @@ const TestimonialsMetrics = () => {
               <div className="absolute -top-4 -right-2 text-9xl text-black/5 font-serif pointer-events-none">“</div>
               
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 relative z-10">
-                <img 
+                <Image
                   src={testimonials[activeTestimonial].image} 
                   className="w-16 h-16 sm:w-24 sm:h-24 rounded-2xl object-cover border-4 border-white shadow-md"
                   alt="Avatar"
+                  width={96} 
+                  height={96}
                 />
                 <div className="text-center sm:text-left flex-1">
                   <div className="mb-4">
